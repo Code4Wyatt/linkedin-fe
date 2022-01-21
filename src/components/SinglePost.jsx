@@ -135,7 +135,7 @@ const SinglePost = (props) => {
             </div>
           </div>
           <div className="post-description">{props.element.text}</div>
-          {props.element.image && (
+          {props.profile.image && (
             <div>
               <img
                 className="image-container"

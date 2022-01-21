@@ -5,7 +5,7 @@ import NewPostModal from "./NewPostModal";
 
 const NewPost = (props) => {
 
-  const [show, setShow] = useState(false);
+  const [ show, setShow ] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
