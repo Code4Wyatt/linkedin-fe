@@ -18,64 +18,64 @@ const SinglePost = (props) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const fetchComments = async () => {
-    try {
-      const response = await fetch(
-        `https://strive-linkedin.herokuapp.com/posts/${props.element._id}/comment`,
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      if (response.ok) {
-        let array = await response.json();
-        setComments(array.data);
-        // console.log("This array of comments", array.data);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const fetchComments = async () => {
+  //   try {
+  //     const response = await fetch(
+  //       `https://strive-linkedin.herokuapp.com/posts/${props.element._id}/comment`,
+  //       {
+  //         method: "GET",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //       }
+  //     );
+  //     if (response.ok) {
+  //       let array = await response.json();
+  //       setComments(array.data);
+  //       // console.log("This array of comments", array.data);
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  useEffect(() => {
-    fetchComments();
-  }, []);
+  // useEffect(() => {
+  //   fetchComments();
+  // }, []);
 
-  const deleteSelectedPost = async () => {
-    try {
-       let response = await fetch(
-        `https://strive-linkedin.herokuapp.com/posts/${props.element._id}`,
-        { method: "DELETE" }
-      );
-      props.fetchPosts();
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const deleteSelectedPost = async () => {
+  //   try {
+  //      let response = await fetch(
+  //       `https://strive-linkedin.herokuapp.com/posts/${props.element._id}`,
+  //       { method: "DELETE" }
+  //     );
+  //     props.fetchPosts();
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
 
-  const fetchLikes = async () => {
-    try {
-      let response = await fetch(`https://strive-linkedin.herokuapp.com/posts/${props.element._id}/like`,
-      {
-        method: "POST",
-        body: JSON.stringify({user: props.profile._id}),
-        headers: {
-          "Content-Type": "application/json",
-        }
-      }
+  // const fetchLikes = async () => {
+  //   try {
+  //     let response = await fetch(`https://strive-linkedin.herokuapp.com/posts/${props.element._id}/like`,
+  //     {
+  //       method: "POST",
+  //       body: JSON.stringify({user: props.profile._id}),
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       }
+  //     }
       
-      )
-      if(response.ok){
-        let data = await response.json()
-        setLikes(data.data.likes.length)
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  //     )
+  //     if(response.ok){
+  //       let data = await response.json()
+  //       setLikes(data.data.likes.length)
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
 
   return (
       <div className="container-post">
@@ -117,7 +117,7 @@ const SinglePost = (props) => {
                     />
                     <Dropdown.Item
                       href="#/action-2"
-                      onClick={deleteSelectedPost}
+                      // onClick={deleteSelectedPost}
                     >
                       Delete Post
                     </Dropdown.Item>
@@ -148,14 +148,14 @@ const SinglePost = (props) => {
           <div>{likes}</div>
           <hr />
           <div className="d-flex justify-content-around">
-            <span className="feed-buttons" onClick={fetchLikes}>
+            {/* <span className="feed-buttons" onClick={fetchLikes}>
               <i class="bi bi-hand-thumbs-up mr-2"></i>Like
-            </span>
+            </span> */}
             <span className="feed-buttons" style={{ cursor: "pointer" }}>
               <AddComment
                 id={props.element._id}
                 profile={props.profile}
-                fetchComments={fetchComments}
+                // fetchComments={fetchComments}
               />
               Comment
             </span>
@@ -172,7 +172,7 @@ const SinglePost = (props) => {
         {comments.length !== -1 &&
         comments.map((c) => (
           <div>
-            < div className="row">
+            <div className="row">
               <Col xs="1">
                  <img 
                     className="comment-image"
@@ -198,7 +198,7 @@ const SinglePost = (props) => {
                     userId={props.element.user._id}
                     id={props.element._id}
                     commentId={c._id}
-                    fetchComments={fetchComments}
+                    // fetchComments={fetchComments}
                      />
                   </div>
                 </div>

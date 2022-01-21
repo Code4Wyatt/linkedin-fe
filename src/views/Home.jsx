@@ -28,7 +28,7 @@ const Profile = (props) => {
   const fetchProfile = async () => {
     try {
       let response = await fetch(
-        `https://strive-linkedin.herokuapp.com/profile/619234e538541a787a13c554`);
+        `https://strive-linkedin-backend.herokuapp.com/profiles/61e58b8972b39aa50bd5a5e0`);
       if (response.ok) {
         let data = await response.json()
         setProfile(data)
