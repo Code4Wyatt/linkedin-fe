@@ -7,7 +7,7 @@ const [post, setPost] = useState([])
 
   const fetchSinglePost = async () => {
     try {
-      let response = await fetch(`https://strive-linkedin.herokuapp.com/posts/${id}`);
+      let response = await fetch(`http://localhost:5001/post/${id}`);
       if (response.ok) {
         let data = await response.json();
 

@@ -11,10 +11,10 @@ import EditComment from "./EditComment";
 const SinglePost = (props) => {
   // console.log("This is element", props.element);
 
-  const [comments, setComments] = useState([]);
+  const [ comments, setComments ] = useState([]);
 
-  const [show, setShow] = useState(false);
-  const [likes , setLikes] = useState(0);
+  const [ show, setShow ] = useState(false);
+  const [ likes , setLikes ] = useState(0);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 

@@ -19,7 +19,7 @@ const Profile = (props) => {
   const fetchUser = async (id) => {
     try {
       let response = await fetch(
-        "https://strive-linkedin.herokuapp.com/profile/" + id
+        "http://localhost:5001/profiles/" + id
       );
       let data = await response.json();
       setUser(data);

@@ -4,7 +4,6 @@ import { ArrowRight } from "react-bootstrap-icons";
 import { InfoSquareFill } from "react-bootstrap-icons"
 import "../CssStyles/RightSideBarHome.css"
 
-
 const RightSideBar = () => {
     return (
         <>
@@ -20,7 +19,33 @@ const RightSideBar = () => {
 
                             <div className="profile-details ml-4 mb-2">
                                 <div className="profile-name">
-                                    Lorenzo Giorgini
+                                    Riccardo Guilin
+                                </div>
+                                
+                                
+                                <div className="profile-title">
+                                    Darth Vader
+                                </div>
+
+                               
+                                <div className="profile-message">
+                                <Button
+                                    className="rounded-pill btn-sm d-flex align-items-center"
+                                    variant="outline-dark"
+                                >
+                                   <Plus id="plus-icon" style={{fontSize:"20px"}}/> Follow
+                                </Button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="d-flex">
+                                <img src="https://via.placeholder.com/150" className="profile-img" alt=" " />
+
+                            <div className="profile-details ml-4 mb-2">
+                                <div className="profile-name">
+                                    Ali Mukhtor
                                 </div>
                                 
 
@@ -47,34 +72,7 @@ const RightSideBar = () => {
 
                             <div className="profile-details ml-4 mb-2">
                                 <div className="profile-name">
-                                    Emilian Kasemi
-                                </div>
-                                
-
-                                
-                                <div className="profile-title">
-                                    Strive Student
-                                </div>
-
-                               
-                                <div className="profile-message">
-                                <Button
-                                    className="rounded-pill btn-sm d-flex align-items-center"
-                                    variant="outline-dark"
-                                >
-                                   <Plus id="plus-icon" style={{fontSize:"20px"}}/> Follow
-                                </Button>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div className="d-flex">
-                                <img src="https://via.placeholder.com/150" className="profile-img" alt=" " />
-
-                            <div className="profile-details ml-4 mb-2">
-                                <div className="profile-name">
-                                    Adam Belahouane
+                                    Mansi Ganar
                                 </div>
                                 
 
